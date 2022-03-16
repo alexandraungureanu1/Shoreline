@@ -1,7 +1,7 @@
 ## Table of contents
 * [Problem description](#problem-description)
 * [Discussion about the implementation](#discussion)
-* [Example of program in action](#example)
+* [Example of the program in action](#example)
 
 ## Problem description
 
@@ -15,7 +15,7 @@ Given a social network and two users, user A and user B, please write a function
 :white_circle: How did you represent the social network? Why did you choose this representation? </br>
 
 :heavy_check_mark: I represented the network as a graph: the vertices are the users and the edges are the friend bonds between two users, the network becoming only an adjacency list of the nodes. 
-I chose this specific implementation as it was the most efficient and effective way to store the data and manipulate it.  </br>
+I chose this specific implementation as it was the most efficient and effective way to store the data and manipulate it.
 The solution is in Java and I used two classes besides the main one: 
 the user class which stores the name and a unique id of the user and a network class with an adjacency list for the connections. </br></br>
 
@@ -37,6 +37,15 @@ I tried to make a friend connection with same user, but it also doesn’t allow 
 thing because the network is a hashmap with a set on the second position, which is a collection that doesn’t allow duplicates. </br></br>
 
 
+## Example of the program in action
+
+For a social network that looks like this: </br>
+
+![populating the network](https://user-images.githubusercontent.com/79217352/158604120-76ea67ad-4e51-4d9c-b443-23afde0f6993.JPG)
+
+If we wnat the chain between user u2 and user u7, that will be: </br>
+
+![chain1](https://user-images.githubusercontent.com/79217352/158604298-19969e8c-cbe7-4ac2-ac73-1f9fac052652.JPG)
 
 
 
