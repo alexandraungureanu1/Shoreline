@@ -8,7 +8,7 @@ public class Network {
      * This data member is an adjacency list for every user(node) in the social
      * network. Using a HashMap for storing the friends connections between users
      * there won't be situations with the same user put twice in the network.
-     * Using a set, this also takes care that a user cannot befriend itself or have
+     * Using a set, this also takes care that a user cannot have
      * in his friends list the same person twice.
      */
     private HashMap<User, Set<User>> listConnections;
@@ -28,6 +28,12 @@ public class Network {
      * @param secondUser - a user of the network
      */
     public void addConnection(User firstUser, User secondUser) {
+
+        /**
+         * We make sure that the user doesn't befriend himself.
+         */
+        if(firstUser.equals(secondUser))
+            return;
         listConnections.get(firstUser).add(secondUser);
         listConnections.get(secondUser).add(firstUser);
     }
