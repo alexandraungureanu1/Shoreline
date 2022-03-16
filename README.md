@@ -46,7 +46,7 @@ If we want the chain between user u2 and user u7, that will be: </br>
 
 ![chain1](https://user-images.githubusercontent.com/79217352/158604298-19969e8c-cbe7-4ac2-ac73-1f9fac052652.JPG)
 
-Or if we want the chain between user u9 and user11 (which doesn't have any friends), we'll get! </br>
+Or if we want the chain between user u9 and user11 (which doesn't have any friends), we'll get: </br>
 ![no_chain](https://user-images.githubusercontent.com/79217352/158605993-bad35c0a-10e6-4064-b8cd-ae14383b6de9.JPG)
 
 
