@@ -19,7 +19,7 @@ I chose this specific implementation as it was the most efficient and effective 
 The solution is in Java and I used two classes besides the main one: 
 the user class which stores the name and a unique id of the user and a network class with an adjacency list for the connections. </br></br>
 
-:white_circle: 2.	What algorithm did you use to compute the shortest chain of friends? What alternatives did you consider? 
+:white_circle:	What algorithm did you use to compute the shortest chain of friends? What alternatives did you consider? 
 Why did you choose this algorithm over the alternatives? </br>
 
 :heavy_check_mark: The algorithm chosen is a slightly changed BFS. When we make the traversal of the graph by applying bread first search, 
