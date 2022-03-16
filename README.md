@@ -1,7 +1,7 @@
 ## Table of contents
 * [Problem description](#problem-description)
-* [Discussion about the implementation](#discussion)
-* [Example of the program in action](#example)
+* [Discussion about the implementation](#discussion-about-the-implementation)
+* [Example of the program in action](#example-of-the-program-in-action)
 
 ## Problem description
 
@@ -43,21 +43,9 @@ For a social network that looks like this: </br>
 
 ![populating the network](https://user-images.githubusercontent.com/79217352/158604120-76ea67ad-4e51-4d9c-b443-23afde0f6993.JPG)
 
-If we wnat the chain between user u2 and user u7, that will be: </br>
+If we want the chain between user u2 and user u7, that will be: </br>
 
 ![chain1](https://user-images.githubusercontent.com/79217352/158604298-19969e8c-cbe7-4ac2-ac73-1f9fac052652.JPG)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
