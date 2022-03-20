@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class NetworkTest {
 
     @Test
-    void twoConnectedComponentsShouldEqualZero() {
+    void twoConnectedComponentsShouldEqualNoChain() {
         Network network = new Network();
 
         List<User> listOfNodes = IntStream.rangeClosed(0, 14)
@@ -108,7 +108,7 @@ class NetworkTest {
     }
 
     @Test
-    void moreShortestPaths() {
+    void moreThanOneShortestPath() {
         Network network = new Network();
 
         List<User> listOfNodes = IntStream.rangeClosed(0, 14)
