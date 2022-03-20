@@ -30,24 +30,23 @@ As the BFS traversal has a complexity of O(E+V), comparing to the one of O(V^2) 
 
 :white_circle: Please enumerate the test cases you considered and explain their relevance. </br>
 
-:heavy_check_mark: The test cases made: computing the shortest path between a connected vertex and an unconnected one. 
-In that case the algorithm shows that the two users don’t have common friends.
-I also tried to find the chain between the same users, but the program recognizes this fact.  
-I tried to make a friend connection with same user, but it also doesn’t allow me to do such a
-thing because the network is a hashmap with a set on the second position, which is a collection that doesn’t allow duplicates. </br></br>
+:heavy_check_mark: The test cases made: 
+- happy path:
+ * a normal instance with users that have common friends
+ * when there are two shortest paths, it will choose one of these two, but the program won't crash 
+- unhappy path: 
+ * when the two users are friends
+ * when the network doesn't have users
+ * when the network has one friend
+ * when we check the chain between the same user
+ * when the users don't belong to the network
+
+## Improvements 
+- the equals method and the hashCode one were overwritten
+- the tests were done using JUnit in a Maven project
 
 
-## Example of the program in action
 
-For a social network that looks like this: </br>
-![network_git](https://user-images.githubusercontent.com/79217352/158605593-67a833df-f91b-4c3b-889f-77530843e615.JPG)
-
-If we want the shortest chain between user u2 and user u7, that will be: </br>
-
-![chain1](https://user-images.githubusercontent.com/79217352/158604298-19969e8c-cbe7-4ac2-ac73-1f9fac052652.JPG)
-
-Or if we want the shortest chain between user u9 and user11 (which doesn't have any friends), we'll get: </br>
-![no_chain](https://user-images.githubusercontent.com/79217352/158605993-bad35c0a-10e6-4064-b8cd-ae14383b6de9.JPG)
 
 
 
