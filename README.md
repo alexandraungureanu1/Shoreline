@@ -31,8 +31,9 @@ As the BFS traversal has a complexity of O(E+V), comparing to the one of O(V^2) 
 
 :white_circle: Please enumerate the test cases you considered and explain their relevance. </br>
 
-:heavy_check_mark: The test cases made: </br>
-   Happy path: 
+:heavy_check_mark: The test cases made: </br></br>
+
+Happy path: 
  - a normal instance with users that have common friends
  - when there are two shortest paths, it will choose one of these two, but the program won't crash </br></br>
 Unhappy path: </br>
