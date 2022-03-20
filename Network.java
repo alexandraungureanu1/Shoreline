@@ -1,6 +1,7 @@
-package com.company;
-
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
 
 public class Network {
 
@@ -32,7 +33,7 @@ public class Network {
         /**
          * We make sure that the user doesn't befriend himself.
          */
-        if(firstUser.equals(secondUser))
+        if (firstUser.equals(secondUser))
             return;
         listConnections.get(firstUser).add(secondUser);
         listConnections.get(secondUser).add(firstUser);
@@ -60,11 +61,22 @@ public class Network {
      * @param A - the source vertex
      * @param B - the destination  vertex
      */
-    public void findChain(User A, User B) {
+    public int findChain(User A, User B) {
+
+        if (listConnections.size() == 0) {
+            System.out.println("The network doesn't have users");
+            return -1;
+        }
+
+        if (!listConnections.containsKey(A) || !listConnections.containsKey(B)) {
+            /* it also catches the case when the network is made of only one user*/
+            System.out.println("The network doesn't have these users!");
+            return -1;
+        }
 
         if (A.equals(B)) {
             System.out.println("These are the same users!");
-            return;
+            return -1;
         }
 
         /**
@@ -78,7 +90,7 @@ public class Network {
 
         if (bfs(A, B, predecessor, distance) == false) {
             System.out.println("There is no chain of friends between these two users.");
-            return;
+            return -1;
         }
 
         /**
@@ -93,11 +105,16 @@ public class Network {
             fromEndToStart = predecessor.get(fromEndToStart);
         }
 
+        if (path.size() == 2) {
+            System.out.println("They are already friends!");
+            return 0;
+        }
         System.out.println("Chain of friends between " + A.getName() + " and " + B.getName() + " is: ");
         for (int i = path.size() - 1; i >= 0; i--) {
             System.out.print(path.get(i).getName() + " ");
         }
 
+        return path.size();
     }
 
     private boolean bfs(User A, User B, HashMap<User, User> predecessor, HashMap<User, Integer> distance) {
