@@ -1,7 +1,6 @@
 ## Table of contents
 * [Problem description](#problem-description)
 * [Discussion about the implementation](#discussion-about-the-implementation)
-* [Example of the program in action](#example-of-the-program-in-action)
 * [Improvements](#improvements)
 
 ## Problem description
@@ -31,7 +30,7 @@ As the BFS traversal has a complexity of O(E+V), comparing to the one of O(V^2) 
 
 :white_circle: Please enumerate the test cases you considered and explain their relevance. </br>
 
-:heavy_check_mark: The test cases made: </br></br>
+:heavy_check_mark: The test cases made: </br>
 
 Happy path: 
  - a normal instance with users that have common friends
