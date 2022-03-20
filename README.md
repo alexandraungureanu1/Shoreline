@@ -32,10 +32,10 @@ As the BFS traversal has a complexity of O(E+V), comparing to the one of O(V^2) 
 :white_circle: Please enumerate the test cases you considered and explain their relevance. </br>
 
 :heavy_check_mark: The test cases made: </br>
-🟡 happy path: 
+Happy path: 
  - a normal instance with users that have common friends
- - when there are two shortest paths, it will choose one of these two, but the program won't crash
-🟡 unhappy path: </br>
+ - when there are two shortest paths, it will choose one of these two, but the program won't crash </br>
+Unhappy path: </br>
  - when the two users are friends -> to see whether the algorithm will identify this case and not give a chain
  - when the network doesn't have users
  - when it is asked to get the chain between an user and a non-user
